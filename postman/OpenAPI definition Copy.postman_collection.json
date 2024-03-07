@@ -1,0 +1,1335 @@
+{
+	"info": {
+		"_postman_id": "299b196e-d61d-4c97-b5e0-0151cd47d5c5",
+		"name": "OpenAPI definition Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27240033"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "protected",
+							"item": [
+								{
+									"name": "posts",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "get Post By Id",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/posts/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"posts",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/posts/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"posts",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "[\n  {\n    \"id\": \"<long>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"user\": {\n      \"id\": \"<integer>\",\n      \"firstname\": \"<string>\",\n      \"lastname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"role\": \"ADMIN\",\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"username\": \"<string>\",\n      \"accountNonLocked\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonExpired\": \"<boolean>\"\n    },\n    \"categories\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<long>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"user\": {\n      \"id\": \"<integer>\",\n      \"firstname\": \"<string>\",\n      \"lastname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"role\": \"ADMIN\",\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"username\": \"<string>\",\n      \"accountNonLocked\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonExpired\": \"<boolean>\"\n    },\n    \"categories\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ]\n  }\n]"
+														}
+													]
+												},
+												{
+													"name": "update Post",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"categoryIds\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"userIds\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/posts/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"posts",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"categoryIds\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"userIds\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/posts/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"posts",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"user\": {\n    \"id\": \"<integer>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  \"categories\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "delete Post",
+													"request": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/posts/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"posts",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/posts/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"posts",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"user\": {\n    \"id\": \"<integer>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  \"categories\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "get All Posts",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/protected/posts/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"protected",
+														"posts",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/posts/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"posts",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": \"<long>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"user\": {\n      \"id\": \"<integer>\",\n      \"firstname\": \"<string>\",\n      \"lastname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"role\": \"ADMIN\",\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"username\": \"<string>\",\n      \"accountNonLocked\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonExpired\": \"<boolean>\"\n    },\n    \"categories\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ]\n  },\n  {\n    \"id\": \"<long>\",\n    \"title\": \"<string>\",\n    \"description\": \"<string>\",\n    \"user\": {\n      \"id\": \"<integer>\",\n      \"firstname\": \"<string>\",\n      \"lastname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"password\": \"<string>\",\n      \"role\": \"ADMIN\",\n      \"enabled\": \"<boolean>\",\n      \"authorities\": [\n        {\n          \"authority\": \"<string>\"\n        },\n        {\n          \"authority\": \"<string>\"\n        }\n      ],\n      \"username\": \"<string>\",\n      \"accountNonLocked\": \"<boolean>\",\n      \"credentialsNonExpired\": \"<boolean>\",\n      \"accountNonExpired\": \"<boolean>\"\n    },\n    \"categories\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ]\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "create Host",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"title\": \"Questo è il mio post 2\",\n  \"description\": \"Questa è la mia descrizione 2\",\n  \"categoryIds\": [\n    1\n  ],\n  \"userIds\": [\n    1\n  ]\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/protected/posts/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"protected",
+														"posts",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"categoryIds\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"userIds\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/posts/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"posts",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<long>\",\n  \"title\": \"<string>\",\n  \"description\": \"<string>\",\n  \"user\": {\n    \"id\": \"<integer>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  \"categories\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "comments",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "update Comment",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"description\": \"<string>\",\n  \"userIds\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"postIds\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/comments/:id?id=<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"comments",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"description\": \"<string>\",\n  \"userIds\": [\n    \"<long>\",\n    \"<long>\"\n  ],\n  \"postIds\": [\n    \"<long>\",\n    \"<long>\"\n  ]\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/comments/:id?id=<long>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"comments",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "id",
+																			"value": "<long>",
+																			"description": "(Required) "
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"desctiption\": \"<string>\",\n  \"approved\": \"<boolean>\",\n  \"parentComment\": {\n    \"value\": \"<Circular reference to #/components/schemas/Comment detected>\"\n  },\n  \"user\": {\n    \"id\": \"<integer>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  \"posts\": [\n    {\n      \"id\": \"<long>\",\n      \"title\": \"<string>\",\n      \"description\": \"<string>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"firstname\": \"<string>\",\n        \"lastname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"role\": \"ADMIN\",\n        \"enabled\": \"<boolean>\",\n        \"authorities\": [\n          {\n            \"authority\": \"<string>\"\n          },\n          {\n            \"authority\": \"<string>\"\n          }\n        ],\n        \"username\": \"<string>\",\n        \"accountNonLocked\": \"<boolean>\",\n        \"credentialsNonExpired\": \"<boolean>\",\n        \"accountNonExpired\": \"<boolean>\"\n      },\n      \"categories\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"title\": \"<string>\",\n      \"description\": \"<string>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"firstname\": \"<string>\",\n        \"lastname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"role\": \"ADMIN\",\n        \"enabled\": \"<boolean>\",\n        \"authorities\": [\n          {\n            \"authority\": \"<string>\"\n          },\n          {\n            \"authority\": \"<string>\"\n          }\n        ],\n        \"username\": \"<string>\",\n        \"accountNonLocked\": \"<boolean>\",\n        \"credentialsNonExpired\": \"<boolean>\",\n        \"accountNonExpired\": \"<boolean>\"\n      },\n      \"categories\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "delete Comment",
+													"request": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/comments/:id?id=<long>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"comments",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/comments/:id?id=<long>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"comments",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "id",
+																			"value": "<long>",
+																			"description": "(Required) "
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"desctiption\": \"<string>\",\n  \"approved\": \"<boolean>\",\n  \"parentComment\": {\n    \"value\": \"<Circular reference to #/components/schemas/Comment detected>\"\n  },\n  \"user\": {\n    \"id\": \"<integer>\",\n    \"firstname\": \"<string>\",\n    \"lastname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"role\": \"USER\",\n    \"enabled\": \"<boolean>\",\n    \"authorities\": [\n      {\n        \"authority\": \"<string>\"\n      },\n      {\n        \"authority\": \"<string>\"\n      }\n    ],\n    \"username\": \"<string>\",\n    \"accountNonLocked\": \"<boolean>\",\n    \"credentialsNonExpired\": \"<boolean>\",\n    \"accountNonExpired\": \"<boolean>\"\n  },\n  \"posts\": [\n    {\n      \"id\": \"<long>\",\n      \"title\": \"<string>\",\n      \"description\": \"<string>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"firstname\": \"<string>\",\n        \"lastname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"role\": \"ADMIN\",\n        \"enabled\": \"<boolean>\",\n        \"authorities\": [\n          {\n            \"authority\": \"<string>\"\n          },\n          {\n            \"authority\": \"<string>\"\n          }\n        ],\n        \"username\": \"<string>\",\n        \"accountNonLocked\": \"<boolean>\",\n        \"credentialsNonExpired\": \"<boolean>\",\n        \"accountNonExpired\": \"<boolean>\"\n      },\n      \"categories\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"id\": \"<long>\",\n      \"title\": \"<string>\",\n      \"description\": \"<string>\",\n      \"user\": {\n        \"id\": \"<integer>\",\n        \"firstname\": \"<string>\",\n        \"lastname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"password\": \"<string>\",\n        \"role\": \"ADMIN\",\n        \"enabled\": \"<boolean>\",\n        \"authorities\": [\n          {\n            \"authority\": \"<string>\"\n          },\n          {\n            \"authority\": \"<string>\"\n          }\n        ],\n        \"username\": \"<string>\",\n        \"accountNonLocked\": \"<boolean>\",\n        \"credentialsNonExpired\": \"<boolean>\",\n        \"accountNonExpired\": \"<boolean>\"\n      },\n      \"categories\": [\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"id\": \"<long>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "set Approved",
+													"request": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/comments/1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"comments",
+																"1"
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "store Comment",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"description\": \"Questo è il mio commento\",\n  \"userIds\": [\n    1\n  ],\n  \"postId\": 1\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/protected/posts/1/comments/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"protected",
+														"posts",
+														"1",
+														"comments",
+														""
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "categories",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "get Category By Id",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/categories/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"categories",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/categories/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"categories",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\"\n}"
+														}
+													]
+												},
+												{
+													"name": "update Category",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/categories/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"categories",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"name\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/categories/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"categories",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\"\n}"
+														}
+													]
+												},
+												{
+													"name": "delete Category",
+													"request": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/categories/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"categories",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<long>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "DELETE",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/protected/categories/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"protected",
+																		"categories",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "get All Categories",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/protected/categories/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"protected",
+														"categories",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/categories/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"categories",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"name\": \"<string>\"\n  }\n]"
+												}
+											]
+										},
+										{
+											"name": "store Category",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"Categoria3\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/protected/categories/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"protected",
+														"categories",
+														""
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"name\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/protected/categories/",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"protected",
+																"categories",
+																""
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "register",
+									"item": [
+										{
+											"name": "register",
+											"request": {
+												"auth": {
+													"type": "noauth"
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"firstname\": \"Serghei\",\n    \"lastname\": \"Cucereavii\",\n    \"email\": \"sergheicucereavi@gmail.com\",\n    \"password\": \"1234\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"register"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "authenticate",
+									"item": [
+										{
+											"name": "authenticate",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"sergheicucereavi@gmail.com\",\n  \"password\": \"1234\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/auth/authenticate",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"auth",
+														"authenticate"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "demo-controller",
+							"item": [
+								{
+									"name": "say Hello",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/demo-controller",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"demo-controller"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/demo-controller",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"demo-controller"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<string>"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZXJnaGVpY3VjZXJlYXZpQGdtYWlsLmNvbSIsImlhdCI6MTcwOTczNTU5MCwiZXhwIjoxNzQxMjcxNTkwfQ.ufCR5GFrY5-g5hb0oRKRVWkRQ7kq_nRiO4ZJxsjbRPc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
